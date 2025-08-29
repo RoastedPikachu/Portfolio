@@ -1,26 +1,25 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*:root {*/
+/*  --background: #ffffff;*/
+/*  --foreground: #171717;*/
+/*}*/
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/*@theme inline {*/
+/*  --color-background: var(--background);*/
+/*  --color-foreground: var(--foreground);*/
+/*  --font-sans: var(--font-geist-sans);*/
+/*  --font-mono: var(--font-geist-mono);*/
+/*}*/
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply grid justify-items-center min-w-screen min-h-screen bg-[#0c243b] overflow-x-hidden cursor-none;
+}
+
+.customCursor {
+  @apply absolute flex justify-center items-center w-[40px] h-[40px] bg-[#ffffff] rounded-[100%];
+}
+
+.customCursor > div {
+  @apply w-[8px] h-[8px] bg-[#404040] rounded-[100%];
 }
