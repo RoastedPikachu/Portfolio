@@ -1,28 +1,14 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React from "react";
+
+import { initialBlobityOptions } from "@/utils/blobity.config";
+
+import useBlobity from "blobity/lib/react/useBlobity";
 
 const Cursor = () => {
-  const cursorRef = useRef(null) as any;
+  const blobity = useBlobity(initialBlobityOptions);
 
-  const handleMouseMove = (event: any) => {
-    if (cursorRef) {
-      cursorRef.current.style.left = event.clientX - 20 + "px";
-      cursorRef.current.style.top = event.clientY - 20 + "px";
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-  return (
-    <div ref={cursorRef} className="customCursor">
-      <div />
-    </div>
-  );
+  return <div />;
 };
 
 export default Cursor;
