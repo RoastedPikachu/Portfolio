@@ -12,14 +12,33 @@
 /*  --font-mono: var(--font-geist-mono);*/
 /*}*/
 
+@font-face {
+  font-family: "KumbhSans";
+  src: url("./fonts/KumbhSans-VariableFont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("./fonts/NotoSans-VariableFont.ttf"), url("./fonts/NotoSans-Italic-VariableFont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Syne";
+  src: url("./fonts/Syne-VariableFont.ttf") format("truetype");
+}
+
 body {
-  @apply grid justify-items-center min-w-screen min-h-screen bg-[#0c243b] overflow-x-hidden cursor-none;
+  @apply grid justify-items-center min-w-screen min-h-screen bg-[#0c243b] overflow-x-hidden;
 }
 
-.customCursor {
-  @apply absolute flex justify-center items-center w-[40px] h-[40px] bg-[#ffffff] rounded-[100%];
+a {
+  @apply outline-none;
 }
 
-.customCursor > div {
-  @apply w-[8px] h-[8px] bg-[#404040] rounded-[100%];
+input {
+  @apply outline-none;
+}
+
+button {
+  @apply outline-none;
 }
