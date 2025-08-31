@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@import "../../app/globals.css";
+
+.project {
+    @apply relative grid grid-cols-[41%_59%] gap-x-[40px] px-[20px] py-[15px] w-full h-auto bg-gradient-to-r from-gradient-start to-gradient-end rounded-[15px];
+}
+
+.project-banner {
+    @apply w-full h-[280px] object-cover rounded-[10px];
+}
+
+.project-info {
+    @apply relative w-[calc(100%-40px)];
+}
+
+.project-info-top {
+    @apply flex justify-between items-center w-full;
+}
+
+.project-info-top-title {
+    @apply text-white text-[48px] font-en-primary font-bold;
+}
+
+.project-info-top-links {
+    @apply flex items-center gap-x-[16px];
+}
+
+.project-info-top-links-item {
+    @apply flex justify-center items-center w-[58px] h-[58px] bg-[#31485d] rounded-full;
+}
+
+.inactive-link path {
+    @apply stroke-[#576a78];
+}
+
+.project-info-bottom {
+    @apply grid gap-y-[12px] mt-[12px] w-full;
+}
+
+.project-info-bottom-description {
+    @apply text-white text-[16px] font-en-primary font-normal brightness-75;
+}
+
+.project-info-bottom-tags {
+    @apply flex gap-x-[12px] gap-y-[10px] items-center flex-wrap w-full;
+}
+
+.project-info-bottom-tags-item {
+    @apply px-[10px] py-[6px] bg-gradient-to-r from-gradient-start to-gradient-end rounded-[5px] text-white text-[16px] font-en-primary font-semibold uppercase;
+}

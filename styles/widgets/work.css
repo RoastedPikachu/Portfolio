@@ -19,7 +19,7 @@
 }
 
 .work-experience {
-    @apply relative flex items-start gap-x-[26px] w-full;
+    @apply relative flex items-start gap-x-[26px] mt-[20px] w-full;
 }
 
 .work-experience-decorationLine {
