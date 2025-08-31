@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@import "../../app/globals.css";
+
+.contacts {
+    @apply flex items-center justify-between px-[25px] py-[40px] w-full h-auto bg-gradient-to-r from-gradient-start to-gradient-end rounded-[15px];
+}
+
+.contacts-title {
+    @apply text-white text-[42px] text-left font-en-secondary font-bold uppercase;
+}
+
+.contacts-button {
+    @apply px-[14px] py-[8px] border-2 border-white rounded-[15px] text-white text-[24px] text-center font-en-secondary font-medium uppercase;
+}
