@@ -2,8 +2,8 @@ export const initialBlobityOptions = {
   licenseKey: "opensource",
   focusableElementsOffsetX: 4,
   focusableElementsOffsetY: 4,
-  color: "#E3D3BE",
-  dotColor: "#08233b",
+  color: "#c4b39d",
+  dotColor: "#071f35",
   // color: "#222222",
   invert: true,
   focusableElements:
@@ -12,7 +12,7 @@ export const initialBlobityOptions = {
   fontSize: 16,
   fontWeight: 500,
   opacity: 1,
-  fontColor: "#08233b",
+  fontColor: "#071f35",
   zIndex: 1000,
   magnetic: true,
 };

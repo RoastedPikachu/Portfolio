@@ -10,7 +10,7 @@ const Greetings = () => {
           <p className="greetings-textBlock-startText">Hey, there</p>
 
           <h1 className="greetings-textBlock-title">
-            <b>I'm</b>
+            <b>I'm </b>
             <b>Boris Karabut</b>
             <br />
             <b>a Frontend developer</b>
@@ -22,7 +22,10 @@ const Greetings = () => {
           </p>
         </span>
 
-        <button className="greetings-textBlock-contactButton">
+        <button
+          data-blobity-radius="12"
+          className="greetings-textBlock-contactButton"
+        >
           <svg
             width="22"
             height="22"

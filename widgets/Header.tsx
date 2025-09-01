@@ -6,7 +6,7 @@ import { headerIcons } from "@/data/headerIcons";
 
 import Link from "next/link";
 
-import "@/styles/header.css";
+import "@/styles/widgets/header.css";
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState(1);
@@ -46,12 +46,32 @@ const Header = () => {
         ))}
       </nav>
 
-      <div className="flex items-center gap-x-[18px]">
+      <div className="header-icons">
         {headerIcons.map((icon) => (
-          <Link key={icon.id} href={icon.path}>
+          <Link key={icon.id} href={icon.path} data-blobity-magnetic="false">
             {icon.component}
           </Link>
         ))}
+      </div>
+
+      <div className="header-languageBlock">
+        <button
+          data-blobity-radius="5"
+          data-blobity-magnetic="false"
+          className="header-languageBlock-text"
+        >
+          eng
+        </button>
+
+        <p className="header-languageBlock-text">/</p>
+
+        <button
+          data-blobity-radius="5"
+          data-blobity-magnetic="false"
+          className="header-languageBlock-text"
+        >
+          rus
+        </button>
       </div>
     </header>
   );

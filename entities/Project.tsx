@@ -37,7 +37,7 @@ const Project: React.FC<ProjectProps> = ({
                 href={siteLink}
                 aria-label="View site link"
                 data-blobity-radius="32"
-                data-blobity-magnetic="true"
+                data-blobity-magnetic="false"
                 className="project-info-top-links-item"
               >
                 <svg
@@ -61,6 +61,7 @@ const Project: React.FC<ProjectProps> = ({
                 {...(!siteLink.includes("https") && {
                   "data-blobity-tooltip": siteLink,
                 })}
+                data-blobity-magnetic="false"
                 className="project-info-top-links-item inactive-link"
               >
                 <svg
@@ -86,7 +87,7 @@ const Project: React.FC<ProjectProps> = ({
                 href={githubLink}
                 aria-label="View Github repo"
                 data-blobity-radius="32"
-                data-blobity-magnetic="true"
+                data-blobity-magnetic="false"
                 className="project-info-top-links-item"
               >
                 <svg
@@ -110,6 +111,7 @@ const Project: React.FC<ProjectProps> = ({
                 {...(!githubLink && {
                   "data-blobity-tooltip": `Privately owned by ${owner}`,
                 })}
+                data-blobity-magnetic="false"
                 className="project-info-top-links-item inactive-link"
               >
                 <svg

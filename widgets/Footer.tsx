@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-import "@/styles/footer.css";
+import "@/styles/widgets/footer.css";
 
 const Footer = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -17,7 +17,11 @@ const Footer = () => {
         {currentDate.getFullYear()} / Boris Karabut / ALL RIGHTS RESERVED
       </span>
 
-      <button onClick={scrollToTop} className="footer-scrollButton">
+      <button
+        onClick={scrollToTop}
+        data-blobity-radius="5"
+        className="footer-scrollButton"
+      >
         <svg
           width="18"
           height="18"

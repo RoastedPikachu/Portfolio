@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@import "../../app/globals.css";
+
+.header {
+    @apply fixed flex justify-between items-center top-[40px] mx-auto py-[15px] px-[20px] w-full max-w-[1220px] h-[64px] backdrop-blur-xs bg-linear-to-r from-gradient-start to-gradient-end rounded-[15px] z-100;
+}
+
+.header-nav {
+    @apply flex items-center gap-x-[44px];
+}
+
+.header-nav a {
+    @apply text-[18px] font-en-primary font-medium;
+}
+
+.link-active {
+    @apply text-white;
+}
+
+.link-inactive {
+    @apply text-white2 brightness-60;
+}
+
+.header-icons {
+    @apply flex items-center gap-x-[18px];
+}
+
+.header-languageBlock {
+    @apply absolute flex items-center gap-x-[4px] left-[calc((100%-90px)/2)] bottom-[-34px] px-[15px] py-[2px] h-[34px] backdrop-blur-xs bg-linear-to-r from-gradient-start to-gradient-end rounded-b-[10px];
+}
+
+.header-languageBlock-text {
+    @apply flex items-center h-[18px] text-white text-[20px] font-en-primary font-bold;
+}
