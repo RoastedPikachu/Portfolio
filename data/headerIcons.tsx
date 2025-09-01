@@ -54,7 +54,7 @@ export const headerIcons = [
     component: (
       <svg
         width="22"
-        height="19"
+        height="22"
         viewBox="0 0 22 19"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
