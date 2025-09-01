@@ -50,9 +50,9 @@ const Project: React.FC<ProjectProps> = ({
                   <path
                     d="M16.5 11.917v5.5a1.833 1.833 0 0 1-1.833 1.833H4.583a1.833 1.833 0 0 1-1.833-1.833V7.333A1.833 1.833 0 0 1 4.583 5.5h5.5m3.667-2.75h5.5v5.5M9.167 12.833 19.25 2.75"
                     stroke="#fff"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </Link>
@@ -73,9 +73,9 @@ const Project: React.FC<ProjectProps> = ({
                   <path
                     d="M16.5 11.917v5.5a1.833 1.833 0 0 1-1.833 1.833H4.583a1.833 1.833 0 0 1-1.833-1.833V7.333A1.833 1.833 0 0 1 4.583 5.5h5.5m3.667-2.75h5.5v5.5M9.167 12.833 19.25 2.75"
                     stroke="#fff"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </div>

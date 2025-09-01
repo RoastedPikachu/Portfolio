@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@import "../../app/globals.css";
+
+.greetings {
+    @apply relative flex items-center gap-x-[60px] pt-[180px] pb-[150px] w-full h-screen;
+}
+
+.greetings-textBlock {
+    @apply relative w-full;
+}
+
+.greetings-textBlock-content {
+    @apply grid justify-items-start;
+}
+
+.greetings-textBlock-startText {
+    @apply text-white2 text-[32px] font-en-primary font-normal brightness-75;
+}
+
+.greetings-textBlock-title {
+    @apply mt-[-5px] text-[72px] font-en-primary font-bold leading-[92px];
+}
+
+.greetings-textBlock-title > b:first-child {
+    @apply text-white2 font-bold brightness-75;
+}
+
+.greetings-textBlock-title > b:nth-child(2) {
+    @apply bg-linear-to-br bg-clip-text text-transparent from-gradient2-start via-gradient2-center to-gradient2-end font-bold;
+}
+
+.greetings-textBlock-title > b:last-child {
+    @apply text-white font-bold;
+}
+
+.greetings-textBlock-description {
+    @apply mt-[10px] text-white2 text-[32px] leading-[42px] font-en-primary font-normal brightness-75;
+}
+
+.greetings-textBlock-contactButton {
+    @apply flex items-center gap-x-[12px] mt-[40px] px-[15px] py-[10px] bg-white rounded-[10px];
+}
+
+.greetings-textBlock-contactButton-text {
+    @apply text-black text-[20px] font-en-primary font-semibold;
+}
+
+.greetings-portrait {
+    @apply w-[420px] h-[420px] rounded-[20px] rotate-[-7deg];
+}
