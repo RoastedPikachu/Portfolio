@@ -1,31 +1,53 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+
+import { useInView } from "framer-motion";
 
 import { aboutTools } from "@/data/aboutTools";
 import { aboutParagraphs } from "@/data/aboutParagraphs";
 
+import AnimatedTitle from "@/shared/AnimatedTitle";
+
 import "@/styles/widgets/about.css";
+import AnimatedParagraph from "@/shared/AnimatedParagraph";
 
 const About = () => {
+  const aboutRef = useRef(null);
+
+  const isInView = useInView(aboutRef);
   return (
-    <section className="about">
-      <h2 className="about-title">
-        I make beautiful <br />
-        and fast UI's
-      </h2>
+    <section ref={aboutRef} className="about">
+      <AnimatedTitle
+        type={2}
+        text="I make beautiful and fast UI's"
+        className="about-title"
+        wordSpace="mr-[14px]"
+        charSpace="mr-[0.5px]"
+      />
 
       <div className="about-info">
         <div className="about-info-story">
           {aboutParagraphs.map((paragraph) => (
-            <p key={paragraph.id}>{paragraph.text}</p>
+            <AnimatedParagraph key={paragraph.id}>
+              {paragraph.text}
+            </AnimatedParagraph>
           ))}
         </div>
 
         <div className="about-info-stack">
           {aboutTools.map((tool) => (
             <span key={tool.id} className="about-info-stack-item">
-              <h4 className="about-info-stack-item-title">{tool.title}</h4>
+              <AnimatedTitle
+                type={4}
+                text={tool.title}
+                className="about-info-stack-item-title"
+                wordSpace="mr-[8px]"
+                charSpace="mr-[0.5px]"
+              />
 
-              <p className="about-info-stack-item-text">{tool.content}</p>
+              <AnimatedParagraph className="about-info-stack-item-text">
+                {tool.content}
+              </AnimatedParagraph>
             </span>
           ))}
         </div>

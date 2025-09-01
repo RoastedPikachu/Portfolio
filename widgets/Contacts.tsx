@@ -3,16 +3,16 @@ import React, { useRef } from "react";
 
 import { useInView } from "framer-motion";
 
-import AnimatedTitle from "@/entities/AnimatedTitle";
+import AnimatedTitle from "@/shared/AnimatedTitle";
 
 import "@/styles/widgets/contacts.css";
 
 const Contacts = () => {
-  const buttonRef = useRef(null);
+  const contactsRef = useRef(null);
 
-  const isInView = useInView(buttonRef);
+  const isInView = useInView(contactsRef);
   return (
-    <section className="contacts">
+    <section ref={contactsRef} className="contacts">
       <AnimatedTitle
         type={3}
         text="Want to hire me?"
@@ -22,7 +22,6 @@ const Contacts = () => {
       />
 
       <button
-        ref={buttonRef}
         data-blobity-radius="15"
         className={`contacts-button ${
           isInView
