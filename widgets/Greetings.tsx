@@ -1,29 +1,82 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+
+import { easeOut, motion, useScroll, useTransform } from "framer-motion";
 
 import "@/styles/widgets/greetings.css";
 
 const Greetings = () => {
+  const imgRef = useRef(null);
+
+  const animateIn1 = {
+    opacity: [0, 1],
+    y: ["1rem", "0px"],
+    transition: {
+      delay: 1.5,
+      duration: 0.7,
+      ease: easeOut,
+    },
+  };
+
+  const animateIn2 = {
+    ...animateIn1,
+    transition: {
+      ...animateIn1.transition,
+      delay: 2,
+    },
+  };
+
+  const animateIn3 = {
+    ...animateIn1,
+    transition: {
+      ...animateIn1.transition,
+      delay: 2.4,
+    },
+  };
+
+  const { scrollYProgress } = useScroll({
+    target: imgRef,
+  });
+
+  const imgRotate = useTransform(scrollYProgress, [0, 1], ["-4deg", "-18deg"]);
   return (
     <section className="greetings">
       <div className="greetings-textBlock">
         <span className="greetings-textBlock-content">
-          <p className="greetings-textBlock-startText">Hey, there</p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.1, ease: "easeOut" }}
+            className="greetings-textBlock-startText"
+          >
+            Hey, there
+          </motion.p>
 
-          <h1 className="greetings-textBlock-title">
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={animateIn1}
+            className="greetings-textBlock-title"
+          >
             <b>I'm </b>
             <b>Boris Karabut</b>
             <br />
             <b>a Frontend developer</b>
-          </h1>
+          </motion.h1>
 
-          <p className="greetings-textBlock-description">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={animateIn2}
+            className="greetings-textBlock-description"
+          >
             who works across the stack to deliver fast and beautiful websites
             and web apps that user will love
-          </p>
+          </motion.p>
         </span>
 
-        <button
+        <motion.button
           data-blobity-radius="12"
+          initial={{ opacity: 0 }}
+          animate={animateIn3}
           className="greetings-textBlock-contactButton"
         >
           <svg
@@ -40,10 +93,20 @@ const Greetings = () => {
           </svg>
 
           <p className="greetings-textBlock-contactButton-text">Contact me</p>
-        </button>
+        </motion.button>
       </div>
 
-      <img src="/static/blank.png" alt="" className="greetings-portrait" />
+      <motion.img
+        src="/static/blank.png"
+        alt=""
+        ref={imgRef}
+        style={{
+          rotate: imgRotate,
+        }}
+        initial={{ opacity: 0 }}
+        animate={animateIn1}
+        className="greetings-portrait"
+      />
     </section>
   );
 };

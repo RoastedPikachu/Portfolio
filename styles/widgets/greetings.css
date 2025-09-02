@@ -47,5 +47,5 @@
 }
 
 .greetings-portrait {
-    @apply w-[420px] h-[420px] rounded-[20px] rotate-[-7deg];
+    @apply w-[420px] min-w-[420px] h-[420px] min-h-[420px] rounded-[20px] rotate-[-7deg];
 }
