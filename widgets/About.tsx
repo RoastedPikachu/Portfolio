@@ -14,7 +14,7 @@ import AnimatedParagraph from "@/shared/AnimatedParagraph";
 const About = () => {
   const aboutRef = useRef(null);
 
-  const isInView = useInView(aboutRef);
+  const isInView = useInView(aboutRef, { once: true });
   return (
     <section ref={aboutRef} className="about">
       <AnimatedTitle

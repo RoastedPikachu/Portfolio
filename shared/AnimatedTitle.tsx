@@ -22,7 +22,7 @@ export default function AnimatedTitle({
   const ctrls = useAnimation();
 
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
 
   const wordAnimation = {
     hidden: {},

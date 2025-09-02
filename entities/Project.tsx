@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+
+import { useInView } from "framer-motion";
 
 import Link from "next/link";
 
@@ -23,8 +26,14 @@ const Project: React.FC<ProjectProps> = ({
   description,
   tags,
 }) => {
+  const projectRef = useRef(null);
+
+  const isInView = useInView(projectRef, { once: true });
   return (
-    <div className="project">
+    <div
+      ref={projectRef}
+      className={`project ${isInView ? "translate-y-0 opacity-100" : "translate-y-[16px] opacity-0"}`}
+    >
       <img src={banner} alt="" className="project-banner" />
 
       <div className="project-info">

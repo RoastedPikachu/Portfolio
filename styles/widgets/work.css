@@ -22,50 +22,6 @@
     @apply relative flex items-start gap-x-[26px] mt-[20px] w-full;
 }
 
-.work-experience-decorationLine {
-    @apply relative w-[8px] h-full bg-linear-to-b from-white to-transparent rounded-[40px];
-}
-
-.work-experience-decorationCircle {
-    @apply absolute left-[-8px] p-[2px] w-[24px] h-[24px] bg-white rounded-full;
-}
-
-.work-experience-decorationCircle-inner {
-    @apply p-[3px] w-[20px] h-[20px] bg-theme rounded-full;
-}
-
-.work-experience-decorationCircle-inner-center {
-    @apply w-[14px] h-[14px] bg-white rounded-full;
-}
-
 .work-experience-container {
     @apply relative grid justify-items-start gap-y-[32px] w-full;
-}
-
-.work-experience-container-item {
-    @apply flex items-start gap-x-[16px] w-full;
-}
-
-.work-experience-container-item-image {
-    @apply w-[70px] h-[70px] rounded-[10px];
-}
-
-.work-experience-container-item-textContent {
-    @apply grid gap-y-[8px] w-full;
-}
-
-.work-experience-container-item-textContent-occupation {
-    @apply text-white text-[32px] font-en-primary font-bold;
-}
-
-.work-experience-container-item-textContent-company {
-    @apply text-white text-[20px] font-en-primary font-bold;
-}
-
-.work-experience-container-item-textContent-timeGap {
-    @apply text-white2 text-[16px] font-en-primary font-normal brightness-75;
-}
-
-.work-experience-container-item-textContent-results {
-    @apply grid gap-y-[12px] pl-[22px] text-white text-[16px] font-en-primary font-normal list-disc;
 }

@@ -7,7 +7,7 @@
 }
 
 .header-nav {
-    @apply flex items-center gap-x-[44px];
+    @apply absolute flex items-center gap-x-[44px] left-[calc((100%-469px)/2)];
 }
 
 .header-nav a {

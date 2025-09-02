@@ -4,12 +4,20 @@ import { projects } from "@/data/projects";
 
 import Project from "@/entities/Project";
 
+import AnimatedTitle from "@/shared/AnimatedTitle";
+
 import "@/styles/widgets/projects.css";
 
 const Projects = () => {
   return (
     <section className="projects">
-      <h2 className="projects-title">Projects</h2>
+      <AnimatedTitle
+        type={2}
+        text="Projects"
+        className="projects-title"
+        wordSpace="mr-[14px]"
+        charSpace="mr-[0.5px]"
+      />
 
       <div className="projects-container">
         {projects.map((project) => (

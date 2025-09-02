@@ -10,7 +10,7 @@ import "@/styles/widgets/contacts.css";
 const Contacts = () => {
   const contactsRef = useRef(null);
 
-  const isInView = useInView(contactsRef);
+  const isInView = useInView(contactsRef, { once: true });
   return (
     <section ref={contactsRef} className="contacts">
       <AnimatedTitle

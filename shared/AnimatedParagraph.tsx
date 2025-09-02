@@ -20,7 +20,7 @@ export default function AnimatedParagraph({
 
   const ref = useRef(null);
 
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
 
   const wordAnimation = {
     hidden: {},

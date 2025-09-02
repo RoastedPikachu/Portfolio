@@ -3,7 +3,7 @@
 @import "../../app/globals.css";
 
 .project {
-    @apply relative grid grid-cols-[41%_59%] gap-x-[40px] px-[20px] py-[15px] w-full h-auto bg-gradient-to-r from-gradient-start to-gradient-end rounded-[15px];
+    @apply relative grid grid-cols-[41%_59%] gap-x-[40px] px-[20px] py-[15px] w-full h-auto bg-gradient-to-r from-gradient-start to-gradient-end rounded-[15px] duration-[600ms] ease-in-out;
 }
 
 .project-banner {
