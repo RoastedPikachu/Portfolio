@@ -19,7 +19,7 @@ const About = () => {
     <section ref={aboutRef} className="about">
       <AnimatedTitle
         type={2}
-        text="I make beautiful and fast UI's"
+        text="Я делаю красивые и быстрые интерфейсы"
         className="about-title"
         wordSpace="mr-[14px]"
         charSpace="mr-[0.5px]"

@@ -16,14 +16,14 @@ const Work = () => {
       <div className="work-top">
         <AnimatedTitle
           type={2}
-          text="Work experience"
+          text="Опыт работы"
           className="work-top-title"
           wordSpace="mr-[14px]"
           charSpace="mr-[0.5px]"
         />
 
         <AnimatedParagraph className="work-top-yearsCount">
-          2 years
+          2 года
         </AnimatedParagraph>
       </div>
 

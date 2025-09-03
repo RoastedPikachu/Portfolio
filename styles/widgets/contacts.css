@@ -7,9 +7,9 @@
 }
 
 .contacts-title {
-    @apply text-white text-[42px] text-left font-en-secondary font-bold uppercase;
+    @apply text-white text-[42px] text-left font-ru-secondary font-bold uppercase;
 }
 
 .contacts-button {
-    @apply px-[14px] py-[8px] border-2 border-white rounded-[15px] text-white text-[24px] text-center font-en-secondary font-medium uppercase duration-500 delay-[1500ms] ease-in-out;
+    @apply px-[14px] py-[8px] border-2 border-white rounded-[15px] text-white text-[24px] text-center font-ru-secondary font-medium uppercase duration-500 delay-[1500ms] ease-in-out;
 }

@@ -7,7 +7,7 @@
 }
 
 .footer-textBlock {
-    @apply flex items-center gap-x-[8px] text-white2 text-[20px] font-en-primary font-normal uppercase;
+    @apply flex items-center gap-x-[8px] text-white2 text-[20px] font-ru-primary font-normal uppercase;
 }
 
 .footer-textBlock-copyright {
@@ -19,5 +19,5 @@
 }
 
 .footer-scrollButton > p {
-    @apply text-white2 text-[16px] text-left font-en-primary uppercase;
+    @apply text-white2 text-[16px] text-left font-ru-primary uppercase;
 }

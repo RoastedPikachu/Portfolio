@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { headerTextLinks } from "@/data/headerTextLinks";
 import { headerIcons } from "@/data/headerIcons";
@@ -11,6 +11,16 @@ import "@/styles/widgets/header.css";
 const Header = () => {
   const [activeSection, setActiveSection] = useState(1);
 
+  // useEffect(() => {
+  //   const browserLang = navigator.language;
+  //
+  //   localStorage.setItem("userBrowserLang", browserLang);
+  //
+  //   const locale = browserLang.slice(0, 2);
+  //   localStorage.setItem("locale", locale);
+  //
+  //   console.log("Язык браузера сохранен в localStorage:", browserLang, locale);
+  // }, []);
   return (
     <header className="header">
       {/* Boris Karabut logo*/}
@@ -57,25 +67,25 @@ const Header = () => {
         ))}
       </div>
 
-      <div className="header-languageBlock">
-        <button
-          data-blobity-radius="5"
-          data-blobity-magnetic="false"
-          className="header-languageBlock-text"
-        >
-          eng
-        </button>
+      {/*<div className="header-languageBlock">*/}
+      {/*  <button*/}
+      {/*    data-blobity-radius="5"*/}
+      {/*    data-blobity-magnetic="false"*/}
+      {/*    className="header-languageBlock-text"*/}
+      {/*  >*/}
+      {/*    eng*/}
+      {/*  </button>*/}
 
-        <p className="header-languageBlock-text">/</p>
+      {/*  <p className="header-languageBlock-text">/</p>*/}
 
-        <button
-          data-blobity-radius="5"
-          data-blobity-magnetic="false"
-          className="header-languageBlock-text"
-        >
-          rus
-        </button>
-      </div>
+      {/*  <button*/}
+      {/*    data-blobity-radius="5"*/}
+      {/*    data-blobity-magnetic="false"*/}
+      {/*    className="header-languageBlock-text"*/}
+      {/*  >*/}
+      {/*    rus*/}
+      {/*  </button>*/}
+      {/*</div>*/}
     </header>
   );
 };

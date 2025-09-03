@@ -14,7 +14,7 @@ const Footer = () => {
     <footer className="footer">
       <span className="footer-textBlock">
         <p className="footer-textBlock-copyright">&copy;</p>{" "}
-        {currentDate.getFullYear()} / Boris Karabut / ALL RIGHTS RESERVED
+        {currentDate.getFullYear()} / Борис Карабут / ВСЕ ПРАВА ЗАЩИЩЕНЫ
       </span>
 
       <button
@@ -35,7 +35,7 @@ const Footer = () => {
           />
         </svg>
 
-        <p>Scroll to top</p>
+        <p>Наверх</p>
       </button>
     </footer>
   );

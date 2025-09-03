@@ -27,8 +27,59 @@
   src: url("./fonts/Syne-VariableFont.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Play";
+  src: url("./fonts/Play-Regular.ttf"), url("./fonts/Play-Bold.ttf") format("truetype");
+}
+
+:root {
+  --color-theme: #0c243b;
+
+  --color-white: #ffffff;
+  --color-white2: #e4e9ff;
+
+  --color-black: #0d0d0e;
+
+  --color-gradient-start: #d8d8d81f;
+  --color-gradient-end: #7676761f;
+
+  --color-gradient2-start: #71bcc0;
+  --color-gradient2-center: #4a87b3;
+  --color-gradient2-end: #2f79be;
+
+  --font-en-primary: "KumbhSans";
+  --font-en-secondary: "Syne";
+  --font-ru-primary: "NotoSans";
+  --font-ru-secondary: "Play";
+}
+
+@theme inline {
+  --color-theme: var(--color-theme);
+
+  --color-white: var(--color-white);
+  --color-white2: var(--color-white2);
+
+  --color-black: var(--color-black);
+
+  --color-gradient-start: var(--color-gradient-start);
+  --color-gradient-end: var(--color-gradient-end);
+
+  --color-gradient2-start: var(--color-gradient2-start);
+  --color-gradient2-center: var(--color-gradient2-center);
+  --color-gradient2-end: var(--color-gradient2-end);
+
+  --font-en-primary: var(--font-en-primary);
+  --font-en-secondary: var(--font-en-secondary);
+  --font-ru-primary: var(--font-ru-primary);
+  --font-ru-secondary: var(--font-ru-secondary);
+}
+
+* {
+  @apply scroll-smooth;
+}
+
 body {
-  @apply grid justify-items-center min-w-screen min-h-screen bg-[#0c243b] overflow-x-hidden;
+  @apply relative grid justify-items-center min-w-screen min-h-screen bg-theme overflow-x-hidden;
 }
 
 a {

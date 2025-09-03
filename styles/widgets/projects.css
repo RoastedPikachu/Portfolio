@@ -7,7 +7,7 @@
 }
 
 .projects-title {
-    @apply text-white text-[60px] font-en-secondary font-bold leading-[60px] uppercase brightness-[0.85];
+    @apply text-white text-[60px] font-ru-secondary font-bold leading-[60px] uppercase brightness-[0.85];
 }
 
 .projects-container {

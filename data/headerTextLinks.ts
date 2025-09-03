@@ -2,26 +2,26 @@ export const headerTextLinks = [
   {
     id: 1,
     path: "/",
-    label: "Home",
+    label: "Главная",
   },
   {
     id: 2,
     path: "/",
-    label: "Work",
+    label: "Работа",
   },
   {
     id: 3,
     path: "/",
-    label: "Projects",
+    label: "Проекты",
   },
   {
     id: 3,
     path: "/",
-    label: "About",
+    label: "Обо мне",
   },
   {
     id: 4,
     path: "/",
-    label: "Contacts",
+    label: "Контакты",
   },
 ];

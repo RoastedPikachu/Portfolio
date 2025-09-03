@@ -15,7 +15,7 @@ const Contacts = () => {
     <section ref={contactsRef} className="contacts">
       <AnimatedTitle
         type={3}
-        text="Want to hire me?"
+        text="Хотите нанять меня?"
         className="contacts-title"
         wordSpace="mr-[12px]"
         charSpace="mr-[0.5px]"
@@ -29,7 +29,7 @@ const Contacts = () => {
             : "opacity-0 translate-y-[50px]"
         }`}
       >
-        Contact me
+        Свяжитесь со мной
       </button>
     </section>
   );

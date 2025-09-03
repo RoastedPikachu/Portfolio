@@ -3,7 +3,7 @@
 @import "../../app/globals.css";
 
 .greetings {
-    @apply relative flex items-center gap-x-[60px] pt-[180px] pb-[150px] w-full h-screen;
+    @apply relative flex items-center gap-x-[50px] pt-[180px] pb-[150px] w-full h-screen;
 }
 
 .greetings-textBlock {
@@ -15,11 +15,11 @@
 }
 
 .greetings-textBlock-startText {
-    @apply text-white2 text-[32px] font-en-primary font-normal brightness-75;
+    @apply text-white2 text-[32px] font-ru-primary font-normal brightness-75;
 }
 
 .greetings-textBlock-title {
-    @apply mt-[-5px] text-[72px] font-en-primary font-bold leading-[92px];
+    @apply mt-[-5px] text-[64px] font-ru-primary font-bold leading-[78px];
 }
 
 .greetings-textBlock-title > b:first-child {
@@ -35,7 +35,7 @@
 }
 
 .greetings-textBlock-description {
-    @apply mt-[10px] text-white2 text-[32px] leading-[42px] font-en-primary font-normal brightness-75;
+    @apply mt-[10px] text-white2 text-[32px] leading-[42px] font-ru-primary font-normal brightness-75;
 }
 
 .greetings-textBlock-contactButton {
@@ -43,9 +43,9 @@
 }
 
 .greetings-textBlock-contactButton-text {
-    @apply text-black text-[20px] font-en-primary font-semibold;
+    @apply text-black text-[20px] font-ru-primary font-semibold;
 }
 
 .greetings-portrait {
-    @apply w-[420px] min-w-[420px] h-[420px] min-h-[420px] rounded-[20px] rotate-[-7deg];
+    @apply w-[400px] min-w-[400px] h-[400px] min-h-[400px] rounded-[20px] rotate-[-7deg];
 }

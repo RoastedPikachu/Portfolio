@@ -49,7 +49,7 @@ const Greetings = () => {
             transition={{ duration: 0.1, ease: "easeOut" }}
             className="greetings-textBlock-startText"
           >
-            Hey, there
+            Привет,
           </motion.p>
 
           <motion.h1
@@ -57,10 +57,10 @@ const Greetings = () => {
             animate={animateIn1}
             className="greetings-textBlock-title"
           >
-            <b>I'm </b>
-            <b>Boris Karabut</b>
+            <b>Я </b>
+            <b>Борис Карабут</b>
             <br />
-            <b>a Frontend developer</b>
+            <b>Frontend разработчик</b>
           </motion.h1>
 
           <motion.p
@@ -68,8 +68,8 @@ const Greetings = () => {
             animate={animateIn2}
             className="greetings-textBlock-description"
           >
-            who works across the stack to deliver fast and beautiful websites
-            and web apps that user will love
+            который работает над созданием быстрых и красивых веб-сайтов и
+            веб-приложений, которые полюбят пользователи
           </motion.p>
         </span>
 
@@ -92,7 +92,9 @@ const Greetings = () => {
             />
           </svg>
 
-          <p className="greetings-textBlock-contactButton-text">Contact me</p>
+          <p className="greetings-textBlock-contactButton-text">
+            Связаться со мной
+          </p>
         </motion.button>
       </div>
 

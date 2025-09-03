@@ -3,15 +3,15 @@
 @import "../../app/globals.css";
 
 .header {
-    @apply fixed flex justify-between items-center top-[40px] mx-auto py-[15px] px-[20px] w-full max-w-[1220px] h-[64px] backdrop-blur-xs bg-linear-to-r from-gradient-start to-gradient-end rounded-[15px] z-100;
+    @apply fixed flex justify-between items-center top-[40px] mx-auto py-[15px] px-[20px] w-full max-w-[1220px] h-[59px] backdrop-blur-xs bg-linear-to-r from-gradient-start to-gradient-end rounded-[15px] z-100;
 }
 
 .header-nav {
-    @apply absolute flex items-center gap-x-[44px] left-[calc((100%-469px)/2)];
+    @apply absolute flex items-center gap-x-[35px] left-[calc((100%-548px)/2)];
 }
 
 .header-nav a {
-    @apply text-[18px] font-en-primary font-medium;
+    @apply px-[5px] text-[16px] font-ru-primary font-medium;
 }
 
 .link-active {
