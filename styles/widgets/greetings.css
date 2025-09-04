@@ -35,7 +35,7 @@
 }
 
 .greetings-textBlock-description {
-    @apply mt-[10px] text-white2 text-[32px] leading-[42px] font-ru-primary font-normal brightness-75;
+    @apply mt-[10px] text-white2 text-[32px] leading-[42px] font-ru-primary font-normal brightness-[0.6];
 }
 
 .greetings-textBlock-contactButton {
@@ -48,4 +48,60 @@
 
 .greetings-portrait {
     @apply w-[400px] min-w-[400px] h-[400px] min-h-[400px] rounded-[20px] rotate-[-7deg];
+}
+
+@media (max-width: 480px) {
+    .greetings {
+        @apply grid justify-items-center h-auto pt-[140px] pb-[80px];
+    }
+
+    .greetings-textBlock {
+        @apply grid justify-items-center;
+    }
+
+    .greetings-textBlock-content {
+        @apply justify-items-center text-center;
+    }
+
+    .greetings-textBlock-startText {
+        @apply text-[22px];
+    }
+
+    .greetings-textBlock-title {
+        @apply mt-[10px] text-[32px] leading-[46px];
+    }
+
+    .greetings-textBlock-description {
+        @apply mt-[20px] text-[20px] leading-[34px];
+    }
+
+    .greetings-textBlock-contactButton {
+        @apply mt-[34px];
+    }
+
+    .greetings-portrait {
+        @apply mt-[60px] w-[320px] min-w-[320px] h-[320px] min-h-[320px] rounded-[20px] rotate-0;
+    }
+}
+
+@media (max-width: 400px) {
+    .greetings {
+        @apply pb-[70px];
+    }
+
+    .greetings-textBlock-startText {
+        @apply text-[20px];
+    }
+
+    .greetings-textBlock-title {
+        @apply text-[30px] leading-[42px];
+    }
+
+    .greetings-textBlock-description {
+        @apply text-[18px] leading-[32px];
+    }
+
+    .greetings-portrait {
+        @apply mt-[60px] w-[320px] min-w-[320px] h-[320px] min-h-[320px] rounded-[20px] rotate-0;
+    }
 }

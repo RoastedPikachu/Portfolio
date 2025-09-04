@@ -93,3 +93,39 @@ input {
 button {
   @apply outline-none;
 }
+
+.sectionTitle {
+  @apply text-white text-[60px] font-ru-secondary font-bold leading-[60px] uppercase brightness-[0.85];
+}
+
+.desktop {
+  @apply grid;
+}
+
+.mobile {
+  @apply hidden;
+}
+
+@media (max-width: 480px) {
+  body {
+    @apply px-[20px];
+  }
+
+  .sectionTitle {
+    @apply text-[34px] leading-[42px];
+  }
+
+  .desktop {
+    @apply hidden;
+  }
+
+  .mobile {
+    @apply grid;
+  }
+}
+
+@media (max-width: 400px) {
+  .sectionTitle {
+    @apply text-[28px] leading-[34px];
+  }
+}

@@ -20,7 +20,7 @@ const About = () => {
       <AnimatedTitle
         type={2}
         text="Я делаю красивые и быстрые интерфейсы"
-        className="about-title"
+        className="sectionTitle"
         wordSpace="mr-[14px]"
         charSpace="mr-[0.5px]"
       />

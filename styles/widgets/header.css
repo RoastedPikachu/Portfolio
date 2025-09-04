@@ -3,7 +3,7 @@
 @import "../../app/globals.css";
 
 .header {
-    @apply fixed flex justify-between items-center top-[40px] mx-auto py-[15px] px-[20px] w-full max-w-[1220px] h-[59px] backdrop-blur-xs bg-linear-to-r from-gradient-start to-gradient-end rounded-[15px] z-100;
+    @apply fixed flex justify-between items-center top-[40px] mx-auto py-[15px] px-[20px] w-full max-w-[1220px] h-[59px] backdrop-blur-md bg-linear-to-r from-gradient-start to-gradient-end rounded-[15px] z-100;
 }
 
 .header-nav {
@@ -32,4 +32,10 @@
 
 .header-languageBlock-text {
     @apply flex items-center h-[18px] text-white text-[20px] font-en-primary font-bold;
+}
+
+@media (max-width: 480px) {
+    .header {
+        @apply hidden;
+    }
 }

@@ -69,7 +69,7 @@ const Greetings = () => {
             className="greetings-textBlock-description"
           >
             который работает над созданием быстрых и красивых веб-сайтов и
-            веб-приложений, которые полюбят пользователи
+            веб-приложений, которые полюбят пользователи.
           </motion.p>
         </span>
 
@@ -107,7 +107,16 @@ const Greetings = () => {
         }}
         initial={{ opacity: 0 }}
         animate={animateIn1}
-        className="greetings-portrait"
+        className="greetings-portrait desktop"
+      />
+
+      <motion.img
+        src="/static/blank.png"
+        alt=""
+        ref={imgRef}
+        initial={{ opacity: 0 }}
+        animate={animateIn1}
+        className="greetings-portrait mobile"
       />
     </section>
   );

@@ -3,7 +3,7 @@
 @import "../../app/globals.css";
 
 .project {
-    @apply relative grid grid-cols-[41%_59%] gap-x-[40px] px-[20px] py-[15px] w-full h-auto bg-gradient-to-r from-gradient-start to-gradient-end rounded-[15px] duration-[600ms] ease-in-out;
+    @apply relative grid grid-cols-[41%_59%] gap-x-[40px] px-[20px] py-[20px] w-full h-auto bg-gradient-to-r from-gradient-start to-gradient-end rounded-[15px] duration-[600ms] ease-in-out;
 }
 
 .project-banner {
@@ -30,6 +30,10 @@
     @apply flex justify-center items-center w-[58px] h-[58px] bg-[#31485d] rounded-full;
 }
 
+.project-info-top-links-item svg {
+    @apply w-[32px] h-[32px];
+}
+
 .inactive-link path {
     @apply stroke-[#576a78];
 }
@@ -48,4 +52,64 @@
 
 .project-info-bottom-tags-item {
     @apply px-[10px] py-[6px] bg-gradient-to-r from-gradient-start to-gradient-end rounded-[5px] text-white text-[16px] font-en-primary font-semibold uppercase;
+}
+
+@media (max-width: 480px) {
+    .project {
+        @apply grid-cols-1 gap-y-[20px];
+    }
+
+    .project-banner {
+        @apply h-[200px];
+    }
+
+    .project-info {
+        @apply grid w-full gap-y-[12px];
+    }
+
+    .project-info-top-title {
+        @apply text-[30px];
+    }
+
+    .project-info-top-links {
+        @apply gap-x-[8px];
+    }
+
+    .project-info-top-links-item {
+        @apply w-[48px] h-[48px];
+    }
+
+    .project-info-top-links-item svg {
+        @apply w-[24px] h-[24px];
+    }
+
+    .project-info-bottom {
+        @apply mt-0;
+    }
+}
+
+@media (max-width: 400px) {
+    .project {
+        @apply gap-y-[16px];
+    }
+
+    .project-banner {
+        @apply h-[180px];
+    }
+
+    .project-info-top-title {
+        @apply text-[24px];
+    }
+
+    .project-info-top-links-item {
+        @apply w-[42px] h-[42px];
+    }
+
+    .project-info-top-links-item svg {
+        @apply w-[20px] h-[20px];
+    }
+
+    .project-info-bottom-tags-item {
+        @apply text-[14px];
+    }
 }

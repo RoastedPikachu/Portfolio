@@ -14,13 +14,13 @@ const Timeline = () => {
       ref={timelineRef}
       className={`timeline ${isInView ? "translate-y-0 opacity-100" : "translate-y-[16px] opacity-0"}`}
     >
-      <div className="top-[23px] timeline-decorationCircle">
+      <div className="timeline-decorationCircle">
         <div className="timeline-decorationCircle-inner">
           <div className="timeline-decorationCircle-inner-center" />
         </div>
       </div>
 
-      <div className="top-[349px] timeline-decorationCircle">
+      <div className="timeline-decorationCircle">
         <div className="timeline-decorationCircle-inner">
           <div className="timeline-decorationCircle-inner-center" />
         </div>

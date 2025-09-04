@@ -17,7 +17,7 @@ const Work = () => {
         <AnimatedTitle
           type={2}
           text="Опыт работы"
-          className="work-top-title"
+          className="sectionTitle"
           wordSpace="mr-[14px]"
           charSpace="mr-[0.5px]"
         />

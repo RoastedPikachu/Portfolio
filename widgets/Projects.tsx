@@ -14,7 +14,7 @@ const Projects = () => {
       <AnimatedTitle
         type={2}
         text="Проекты"
-        className="projects-title"
+        className="sectionTitle"
         wordSpace="mr-[14px]"
         charSpace="mr-[0.5px]"
       />

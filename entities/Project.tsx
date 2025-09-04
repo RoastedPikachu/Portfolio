@@ -50,8 +50,6 @@ const Project: React.FC<ProjectProps> = ({
                 className="project-info-top-links-item"
               >
                 <svg
-                  width="32"
-                  height="32"
                   viewBox="0 0 22 22"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -74,8 +72,6 @@ const Project: React.FC<ProjectProps> = ({
                 className="project-info-top-links-item inactive-link"
               >
                 <svg
-                  width="32"
-                  height="32"
                   viewBox="0 0 22 22"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -100,8 +96,6 @@ const Project: React.FC<ProjectProps> = ({
                 className="project-info-top-links-item"
               >
                 <svg
-                  width="32"
-                  height="32"
                   viewBox="0 0 22 22"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -124,8 +118,6 @@ const Project: React.FC<ProjectProps> = ({
                 className="project-info-top-links-item inactive-link"
               >
                 <svg
-                  width="32"
-                  height="32"
                   viewBox="0 0 22 22"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"

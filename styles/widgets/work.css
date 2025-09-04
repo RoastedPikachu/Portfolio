@@ -10,10 +10,6 @@
     @apply flex justify-between items-end w-full h-auto;
 }
 
-.work-top-title {
-    @apply text-white text-[60px] font-ru-secondary font-bold leading-[60px] uppercase brightness-[0.85];
-}
-
 .work-top-yearsCount {
     @apply text-white text-[28px] font-ru-primary font-semibold uppercase brightness-[0.85];
 }
@@ -24,4 +20,28 @@
 
 .work-experience-container {
     @apply relative grid justify-items-start gap-y-[32px] w-full;
+}
+
+@media (max-width: 480px) {
+    .work {
+        @apply pb-[80px];
+    }
+
+    .work-top-yearsCount {
+        @apply text-[24px];
+    }
+
+    .work-experience {
+        @apply gap-x-[18px];
+    }
+}
+
+@media (max-width: 400px) {
+    .work {
+        @apply pb-[70px];
+    }
+
+    .work-top-yearsCount {
+        @apply text-[20px];
+    }
 }

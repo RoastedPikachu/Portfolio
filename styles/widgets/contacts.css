@@ -13,3 +13,23 @@
 .contacts-button {
     @apply px-[14px] py-[8px] border-2 border-white rounded-[15px] text-white text-[24px] text-center font-ru-secondary font-medium uppercase duration-500 delay-[1500ms] ease-in-out;
 }
+
+@media (max-width: 480px) {
+    .contacts {
+        @apply grid justify-items-center justify-center gap-y-[12px] px-[15px] py-[30px];
+    }
+
+    .contacts-title {
+        @apply pl-[14px] text-[24px] text-center;
+    }
+
+    .contacts-button {
+        @apply w-full text-[22px];
+    }
+}
+
+@media (max-width: 400px) {
+    .contacts-title {
+        @apply text-[22px];
+    }
+}
