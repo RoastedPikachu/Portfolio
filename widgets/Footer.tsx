@@ -18,7 +18,7 @@ const Footer = () => {
       </span>
 
       <button
-        onClick={scrollToTop}
+        onClick={() => scrollToTop()}
         data-blobity-radius="5"
         className="footer-scrollButton"
       >

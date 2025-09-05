@@ -40,8 +40,8 @@
 
   --color-black: #0d0d0e;
 
-  --color-gradient-start: #d8d8d81f;
-  --color-gradient-end: #7676761f;
+  --color-gradient-start: #7676761f;
+  --color-gradient-end: #808c9d1f;
 
   --color-gradient2-start: #71bcc0;
   --color-gradient2-center: #4a87b3;
@@ -87,6 +87,10 @@ a {
 }
 
 input {
+  @apply outline-none;
+}
+
+textarea {
   @apply outline-none;
 }
 

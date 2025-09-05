@@ -3,7 +3,7 @@
 @import "../../app/globals.css";
 
 .contacts {
-    @apply flex items-center justify-between px-[25px] py-[40px] w-full h-auto bg-gradient-to-r from-gradient-start to-gradient-end rounded-[15px];
+    @apply flex items-center justify-between px-[25px] py-[40px] w-full bg-gradient-to-r from-gradient-start to-gradient-end rounded-[15px];
 }
 
 .contacts-title {
