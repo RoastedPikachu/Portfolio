@@ -1,4 +1,9 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
+
+import { useInView } from "framer-motion";
+
+import { useView } from "@/context/ViewProvider";
 
 import { workplaces } from "@/data/workplaces";
 
@@ -11,8 +16,19 @@ import AnimatedParagraph from "@/shared/AnimatedParagraph";
 import "@/styles/widgets/work.css";
 
 const Work = () => {
+  const { setSectionInView } = useView();
+
+  const workRef = useRef(null);
+
+  const isInView = useInView(workRef);
+
+  useEffect(() => {
+    if (isInView) {
+      setSectionInView("работа");
+    }
+  }, [isInView]);
   return (
-    <section className="work">
+    <section ref={workRef} className="work">
       <div className="work-top">
         <AnimatedTitle
           type={2}

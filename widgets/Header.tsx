@@ -1,5 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
+
+import { useView } from "@/context/ViewProvider";
 
 import { headerTextLinks } from "@/data/headerTextLinks";
 import { headerIcons } from "@/data/headerIcons";
@@ -9,7 +11,7 @@ import Link from "next/link";
 import "@/styles/widgets/header.css";
 
 const Header = () => {
-  const [activeSection, setActiveSection] = useState(1);
+  const { sectionInView } = useView();
 
   // useEffect(() => {
   //   const browserLang = navigator.language;
@@ -51,7 +53,9 @@ const Header = () => {
             key={textLink.id}
             href={textLink.path}
             className={
-              activeSection === textLink.id ? "link-active" : "link-inactive"
+              sectionInView === textLink.label.toLowerCase()
+                ? "link-active"
+                : "link-inactive"
             }
           >
             {textLink.label}

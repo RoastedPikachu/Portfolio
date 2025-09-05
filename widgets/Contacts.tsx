@@ -1,7 +1,9 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { useInView } from "framer-motion";
+
+import { useView } from "@/context/ViewProvider";
 
 import ContactsForm from "@/features/ContactsForm";
 
@@ -10,11 +12,21 @@ import AnimatedTitle from "@/shared/AnimatedTitle";
 import "@/styles/widgets/contacts.css";
 
 const Contacts = () => {
-  const contactsRef = useRef(null);
+  const { setSectionInView } = useView();
 
-  const isInView = useInView(contactsRef, { once: true });
+  const contactsRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  const isInView = useInView(contactsRef);
+  const isButtonInView = useInView(buttonRef, { once: true });
 
   const [isFormOpened, changeIsFormOpened] = useState(false);
+
+  useEffect(() => {
+    if (isInView) {
+      setSectionInView("контакты");
+    }
+  }, [isInView]);
   return (
     <>
       <section ref={contactsRef} className="contacts">
@@ -27,10 +39,11 @@ const Contacts = () => {
         />
 
         <button
+          ref={buttonRef}
           onClick={() => changeIsFormOpened(true)}
           data-blobity-radius="15"
           className={`contacts-button ${
-            isInView
+            isButtonInView
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-[50px]"
           }`}

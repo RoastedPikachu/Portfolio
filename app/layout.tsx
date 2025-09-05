@@ -4,6 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import Script from "next/script";
 
+import ViewProvider from "@/context/ViewProvider";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -173,7 +175,7 @@ export default function RootLayout({
         <Script src="/static/metric.js" strategy="lazyOnload" />
         <Script src="/static/googleMetric.js" strategy="lazyOnload" />
 
-        {children}
+        <ViewProvider>{children}</ViewProvider>
       </body>
     </html>
   );

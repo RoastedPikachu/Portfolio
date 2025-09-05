@@ -1,4 +1,9 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
+
+import { useInView } from "framer-motion";
+
+import { useView } from "@/context/ViewProvider";
 
 import { projects } from "@/data/projects";
 
@@ -9,8 +14,19 @@ import AnimatedTitle from "@/shared/AnimatedTitle";
 import "@/styles/widgets/projects.css";
 
 const Projects = () => {
+  const { setSectionInView } = useView();
+
+  const projectsRef = useRef(null);
+
+  const isInView = useInView(projectsRef);
+
+  useEffect(() => {
+    if (isInView) {
+      setSectionInView("проекты");
+    }
+  }, [isInView]);
   return (
-    <section className="projects">
+    <section ref={projectsRef} className="projects">
       <AnimatedTitle
         type={2}
         text="Проекты"

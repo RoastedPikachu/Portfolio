@@ -1,20 +1,30 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 import { useInView } from "framer-motion";
+
+import { useView } from "@/context/ViewProvider";
 
 import { aboutTools } from "@/data/aboutTools";
 import { aboutParagraphs } from "@/data/aboutParagraphs";
 
 import AnimatedTitle from "@/shared/AnimatedTitle";
-
-import "@/styles/widgets/about.css";
 import AnimatedParagraph from "@/shared/AnimatedParagraph";
 
+import "@/styles/widgets/about.css";
+
 const About = () => {
+  const { setSectionInView } = useView();
+
   const aboutRef = useRef(null);
 
-  const isInView = useInView(aboutRef, { once: true });
+  const isInView = useInView(aboutRef);
+
+  useEffect(() => {
+    if (isInView) {
+      setSectionInView("обо мне");
+    }
+  }, [isInView]);
   return (
     <section ref={aboutRef} className="about">
       <AnimatedTitle

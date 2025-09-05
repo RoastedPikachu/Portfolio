@@ -1,12 +1,25 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
-import { easeOut, motion, useScroll, useTransform } from "framer-motion";
+import { useView } from "@/context/ViewProvider";
+
+import {
+  easeOut,
+  motion,
+  useInView,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 import "@/styles/widgets/greetings.css";
 
 const Greetings = () => {
+  const { setSectionInView } = useView();
+
+  const greetingsRef = useRef(null);
   const imgRef = useRef(null);
+
+  const isInView = useInView(greetingsRef);
 
   const animateIn1 = {
     opacity: [0, 1],
@@ -39,8 +52,14 @@ const Greetings = () => {
   });
 
   const imgRotate = useTransform(scrollYProgress, [0, 1], ["-4deg", "-18deg"]);
+
+  useEffect(() => {
+    if (isInView) {
+      setSectionInView("главная");
+    }
+  }, [isInView]);
   return (
-    <section className="greetings">
+    <section ref={greetingsRef} className="greetings">
       <div className="greetings-textBlock">
         <span className="greetings-textBlock-content">
           <motion.p
