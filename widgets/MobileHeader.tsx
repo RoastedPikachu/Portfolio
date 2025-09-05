@@ -1,5 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { ReactHTMLElement, useEffect, useRef, useState } from "react";
+
+import { useView } from "@/context/ViewProvider";
 
 import { headerTextLinks } from "@/data/headerTextLinks";
 import { headerIcons } from "@/data/headerIcons";
@@ -11,12 +13,40 @@ import Link from "next/link";
 import "@/styles/widgets/mobileHeader.css";
 
 const MobileHeader = () => {
+  const { sectionInView } = useView();
+
+  const mobileHeaderRef = useRef(null) as any;
+  const mobileMenuRef = useRef(null) as any;
+
   const [isMenuOpened, changeIsMenuOpened] = useState(false);
 
-  const [activeSection, setActiveSection] = useState(1);
+  useEffect(() => {
+    const handleScroll = () => {
+      changeIsMenuOpened(false);
+    };
+
+    const handleOutsideClick = (event: any) => {
+      if (
+        mobileHeaderRef.current &&
+        !mobileHeaderRef.current.contains(event.target as Node) &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node)
+      ) {
+        changeIsMenuOpened(false);
+      }
+    };
+
+    document.addEventListener("scroll", handleScroll);
+    document.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
   return (
     <>
-      <header className="mobileHeader">
+      <header ref={mobileHeaderRef} className="mobileHeader">
         {/* Boris Karabut logo*/}
         <svg
           viewBox="0 0 26 35"
@@ -78,6 +108,7 @@ const MobileHeader = () => {
       <AnimatePresence>
         {isMenuOpened && (
           <motion.div
+            ref={mobileMenuRef}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -89,7 +120,7 @@ const MobileHeader = () => {
                   key={textLink.id}
                   href={textLink.path}
                   className={
-                    activeSection === textLink.id
+                    sectionInView === textLink.label.toLowerCase()
                       ? "link-active"
                       : "link-inactive"
                   }
