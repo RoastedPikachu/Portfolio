@@ -26,7 +26,7 @@ const About = () => {
     }
   }, [isInView]);
   return (
-    <section ref={aboutRef} className="about">
+    <section id="about" ref={aboutRef} className="about">
       <AnimatedTitle
         type={2}
         text="Я делаю красивые и быстрые интерфейсы"

@@ -28,7 +28,7 @@ const Work = () => {
     }
   }, [isInView]);
   return (
-    <section ref={workRef} className="work">
+    <section id="work" ref={workRef} className="work">
       <div className="work-top">
         <AnimatedTitle
           type={2}
