@@ -18,6 +18,7 @@ const Greetings = () => {
 
   const greetingsRef = useRef(null);
   const imgRef = useRef(null);
+  const mobileImgRef = useRef(null);
 
   const isInView = useInView(greetingsRef);
 
@@ -51,7 +52,7 @@ const Greetings = () => {
     target: imgRef,
   });
 
-  const imgRotate = useTransform(scrollYProgress, [0, 1], ["-4deg", "-18deg"]);
+  const imgRotate = useTransform(scrollYProgress, [0, 1], ["6deg", "-8deg"]);
 
   useEffect(() => {
     if (isInView) {
@@ -118,7 +119,7 @@ const Greetings = () => {
       </div>
 
       <motion.img
-        src="/static/blank.png"
+        src="/static/profile-picture.png"
         alt=""
         ref={imgRef}
         style={{
@@ -130,9 +131,9 @@ const Greetings = () => {
       />
 
       <motion.img
-        src="/static/blank.png"
+        src="/static/profile-picture.png"
         alt=""
-        ref={imgRef}
+        ref={mobileImgRef}
         initial={{ opacity: 0 }}
         animate={animateIn1}
         className="greetings-portrait mobile"
