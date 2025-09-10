@@ -60,7 +60,7 @@ const Greetings = () => {
     }
   }, [isInView]);
   return (
-    <section ref={greetingsRef} className="greetings">
+    <section id="home" ref={greetingsRef} className="greetings">
       <div className="greetings-textBlock">
         <span className="greetings-textBlock-content">
           <motion.p

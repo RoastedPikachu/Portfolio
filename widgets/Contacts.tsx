@@ -29,7 +29,7 @@ const Contacts = () => {
   }, [isInView]);
   return (
     <>
-      <section ref={contactsRef} className="contacts">
+      <section id="contacts" ref={contactsRef} className="contacts">
         <AnimatedTitle
           type={3}
           text="Хотите нанять меня?"
