@@ -4,7 +4,7 @@ export const headerIcons = [
   // Linkedin logo
   {
     id: 1,
-    path: "https://www.linkedin.com/in/korobka-boris",
+    path: "https://www.linkedin.com/in/boris-karabut-5bb024406",
     component: (
       <svg
         width="22"
@@ -28,7 +28,7 @@ export const headerIcons = [
   // Github logo
   {
     id: 2,
-    path: "https://github.com/RoastedPikachu",
+    path: "https://github.com/Frontend-Sisyphus",
     component: (
       <svg
         width="22"
@@ -50,7 +50,7 @@ export const headerIcons = [
   // Telegram logo
   {
     id: 3,
-    path: "https://t.me/KorobkaBoris",
+    path: "https://t.me/FrontendSisyphus",
     component: (
       <svg
         width="22"

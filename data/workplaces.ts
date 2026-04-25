@@ -3,7 +3,7 @@ export const workplaces = [
     id: 1,
     logo: "/static/coordinateSystem.png",
     occupation: "Middle Frontend разработчик",
-    companyName: "ООО Система Координат",
+    companyName: "Radix",
     timeGap: "Июль 2024 - Июнь 2025",
     results: [
       {

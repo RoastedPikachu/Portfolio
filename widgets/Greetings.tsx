@@ -93,10 +93,11 @@ const Greetings = () => {
           </motion.p>
         </span>
 
-        <motion.button
+        <motion.a
           data-blobity-radius="12"
           initial={{ opacity: 0 }}
           animate={animateIn3}
+          href="/#contacts"
           className="greetings-textBlock-contactButton"
         >
           <svg
@@ -115,7 +116,7 @@ const Greetings = () => {
           <p className="greetings-textBlock-contactButton-text">
             Связаться со мной
           </p>
-        </motion.button>
+        </motion.a>
       </div>
 
       <motion.img

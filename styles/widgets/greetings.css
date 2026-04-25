@@ -39,7 +39,7 @@
 }
 
 .greetings-textBlock-contactButton {
-    @apply flex items-center gap-x-[12px] mt-[40px] px-[15px] py-[10px] bg-white rounded-[10px];
+    @apply flex items-center gap-x-[12px] mt-[40px] px-[15px] py-[10px] w-[254px] bg-white rounded-[10px];
 }
 
 .greetings-textBlock-contactButton-text {

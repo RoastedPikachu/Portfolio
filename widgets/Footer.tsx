@@ -7,7 +7,7 @@ const Footer = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
 
   const scrollToTop = () => {
-    document.body.scrollTop = 0;
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -18,7 +18,7 @@ const Footer = () => {
       </span>
 
       <button
-        onClick={() => scrollToTop()}
+        onClick={scrollToTop}
         data-blobity-radius="5"
         className="footer-scrollButton"
       >
